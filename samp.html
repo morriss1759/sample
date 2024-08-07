@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            color: green;
+        }
+        .summer{
+           background-color: blueviolet;
+        }
+        button:hover{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <p class="sde">hello</p>
+    <button class="summer" onclick="run()">click me</button>
+</body>
+<script>
+    var wer = document.querySelector('.sde');
+    console.log(wer);
+
+
+    function run(){{
+       var samp = document.querySelector('p').innerHTML = "i worked after been clicked";
+       console.log(samp);
+    }}
+</script>
+</html>

